@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Devin added this because json 1.7.3 failed
+gem 'json', '1.8.2'
+
 gem 'rails', '3.2.6'
 
 # Bundle edge Rails instead:
@@ -10,7 +13,8 @@ gem 'sqlite3'
 gem 'ffaker'
 
 
-gem 'thin'
+# Devin specified version of 'thin' = 1.7.2
+gem 'thin', '1.7.2'
 
 gem 'quiet_assets', :group => :development
 
