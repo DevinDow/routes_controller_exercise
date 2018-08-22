@@ -1,4 +1,18 @@
-<h2>Hello World</h2>
+<h2>Products</h2>
+
+Product count: <%= Product.count %>
+
 <p>
-  Find me in <%= Rails.root.join("app", "views", "products", __FILE__ ) %>
+<%= product = Product.where('price < 20').first %>
+</p>
+
+<p>
+  Product Name: "<%= product.name %>" costs $<%= product.price %>
+</p>
+<p>
+  The seller for this product is named '<%= product.user.name %>'
+</p>
+
+<p>
+  Find this View file in <%= Rails.root.join("app", "views", "products", __FILE__ ) %>
 </p>
